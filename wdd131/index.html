@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <meta name="description" content="Page d'accueil WDD131 - Gaweth Thalon - Dynamic Web Fundamentals">
+    <meta name="keywords" content="WDD131, BYU-Idaho, développement web, Haïti">
+    <meta name="author" content="Gaweth Thalon">
+    <title>WDD131 - Dynamic Web Fundamentals - Gaweth Thalon</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="styles/base.css" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Gaweth</h1>
+    <header>
+        <div class="container">
+            <h1>WDD131: Dynamic Web Fundamentals - Gaweth Thalon</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+                    <li><a href="https://www.byui.edu/">Canvas</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a></li>
+                    <li><a href="https://www.byui.edu/">Final Project</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content-grid">
+            
+            <section class="about-me card">
+                <h2>About Me</h2>
+                <!-- Titre de section -->
+                <div class="about-content">
+                    <!-- Contenu de la section -->
+                    <div class="about-text">
+                        <!-- Partie texte -->
+                        <p>My name is Rubia and I go by Ruby. I was born in South Africa and live with my family in Madagascar. I am currently working as an administrative legal assistant at a law firm. My children are my world and I love spending time with them. I love to travel and I love to learn new things.</p>
+                        <!-- Paragraphe de présentation -->
+                    </div>
+                    <div class="about-image">
+                        <!-- Partie image -->
+                        <img src="https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Ruby+Photo" alt="Portrait of Rubia Francesco" width="300" height="200">
+                        <!-- Image de placeholder avec dimensions et texte alternatif -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="madagascar card">
+                <!-- Section sur Madagascar -->
+                <h2>Toboria, Madagascar</h2>
+                <div class="madagascar-content">
+                    <!-- Contenu de la section -->
+                    <div class="madagascar-image">
+                        <!-- Partie image -->
+                        <img src="https://via.placeholder.com/300x200/50C878/FFFFFF?text=Madagascar" alt="Landscape of Madagascar" width="300" height="200">
+                        <!-- Image de placeholder pour Madagascar -->
+                    </div>
+                    <div class="madagascar-text">
+                        <!-- Partie texte -->
+                        <p>Madagascar is the 4th largest island in the world and is located in the Indian Ocean. It is home to 5% of the world's plant and animal species, of which more than 80% are endemic to Madagascar. The island is best known for its lemurs, baobab trees, and vanilla.</p>
+                        <!-- Description de Madagascar -->
+                    </div>
+                </div>
+            </section>
+
+            <aside class="resources card">
+                <!-- Aside pour les ressources web -->
+                <h2>Web Dev Resources</h2>
+                <!-- Titre de la section ressources -->
+                <ul>
+                    <!-- Liste des ressources -->
+                    <li><a href="https://dev.to/">Dev.to Community</a></li>
+                    <!-- Lien vers Dev.to -->
+                    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                    <!-- Lien vers Smashing Magazine -->
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                    <!-- Lien vers CSS Tricks -->
+                    <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+                    <!-- Lien vers W3Schools (corrigé) -->
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                    <!-- Lien vers Udemy -->
+                    <li><a href="https://via.placeholder.com/">Image Placeholder</a></li>
+                    <!-- Lien vers service d'images placeholder -->
+                </ul>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Pied de page -->
+        <div class="container">
+            <!-- Conteneur pour centrer le contenu -->
+            <p>&copy;<span id="currentyear"></span> 💬 Gaweth Thalon 💬 Haïti</p>
+            <!-- Copyright avec espace pour l'année dynamique -->
+            <p>Last Modification: <span id="lastmodified"></span></p>
+            <!-- Date de dernière modification dynamique -->
+        </div>
+    </footer>
 </body>
 </html>
