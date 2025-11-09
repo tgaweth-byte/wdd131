@@ -1,10 +1,7 @@
 * {
     margin: 0;
-    /* Supprime les marges par défaut */
     padding: 0;
-    /* Supprime les paddings par défaut */
     box-sizing: border-box;
-    /* Inclut padding et border dans width/height */
 }
 
 /* Styles de base pour le corps de la page */
