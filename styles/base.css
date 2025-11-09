@@ -52,6 +52,7 @@ nav a {
     font-weight: 500;
 }
 
+/* Effet hover pour la navigation (critère 6) */
 nav a:hover {
     background-color: #34495e;
     transform: translateY(-2px);
@@ -173,6 +174,7 @@ footer p:last-child {
     margin-bottom: 0;
 }
 
+/* Media Queries pour le responsive design */
 @media (max-width: 768px) {
     .content-grid {
         grid-template-columns: 1fr;
