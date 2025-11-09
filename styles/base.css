@@ -4,325 +4,211 @@
     box-sizing: border-box;
 }
 
-/* Styles de base pour le corps de la page */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Police moderne et lisible */
     line-height: 1.6;
-    /* Hauteur de ligne pour meilleure lisibilité */
     color: #333;
-    /* Couleur de texte sombre pour bon contraste */
     background-color: #f8f9fa;
-    /* Fond clair pour réduire la fatigue oculaire */
     min-height: 100vh;
-    /* Hauteur minimum de la vue */
     display: flex;
-    /* Flexbox pour le sticky footer */
     flex-direction: column;
-    /* Direction colonne */
 }
 
-/* Conteneur principal pour centrer le contenu */
 .container {
     width: 100%;
-    /* Largeur totale */
     max-width: 1200px;
-    /* Largeur maximale pour grands écrans */
     margin: 0 auto;
-    /* Centrage horizontal */
     padding: 0 20px;
-    /* Padding latéral */
 }
 
-/* Styles de l'en-tête */
 header {
     background-color: #2c3e50;
-    /* Bleu foncé professionnel */
     color: white;
-    /* Texte blanc pour contraste AAA */
     padding: 1.5rem 0;
-    /* Espacement vertical */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* Ombre subtile pour profondeur */
 }
 
 header h1 {
     text-align: center;
-    /* Centrage du titre */
     margin-bottom: 1rem;
-    /* Espace sous le titre */
     font-size: 1.5rem;
-    /* Taille de police responsive */
     font-weight: 600;
-    /* Poids de police moyen */
 }
 
-/* Navigation styles */
 nav ul {
     list-style: none;
-    /* Supprime les puces */
     display: flex;
-    /* Flexbox pour disposition horizontale */
     justify-content: center;
-    /* Centrage des éléments */
     flex-wrap: wrap;
-    /* Permet le retour à la ligne sur mobile */
     gap: 1.5rem;
-    /* Espacement entre les liens */
 }
 
 nav a {
     color: white;
-    /* Lien blanc */
     text-decoration: none;
-    /* Supprime le soulignement */
     padding: 0.5rem 1rem;
-    /* Espacement interne */
     border-radius: 4px;
-    /* Coins arrondis */
     transition: all 0.3s ease;
-    /* Transition fluide pour hover */
     font-weight: 500;
-    /* Poids de police moyen */
 }
 
-/* Effet hover pour la navigation (critère 6) */
 nav a:hover {
     background-color: #34495e;
-    /* Changement de fond au survol */
     transform: translateY(-2px);
-    /* Légère élévation (moins de 3px) */
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    /* Ombre subtile */
 }
 
-/* Contenu principal */
 main {
     flex: 1;
-    /* Prend l'espace disponible pour sticky footer */
     padding: 2rem 0;
-    /* Espacement vertical */
 }
 
-/* Grille de contenu responsive */
 .content-grid {
     display: grid;
-    /* CSS Grid pour layout */
     grid-template-columns: 2fr 1fr;
-    /* 2 colonnes: 2/3 et 1/3 */
     gap: 2rem;
-    /* Espace entre les éléments */
     align-items: start;
-    /* Alignement en haut */
 }
 
-/* Styles des cartes */
 .card {
     background: white;
-    /* Fond blanc pour contraste */
     padding: 1.5rem;
-    /* Espacement interne */
     border-radius: 8px;
-    /* Coins arrondis */
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    /* Ombre subtile */
     border: 1px solid #e9ecef;
-    /* Bordure légère */
 }
 
 .card h2 {
     color: #2c3e50;
-    /* Couleur cohérente avec le header */
     margin-bottom: 1rem;
-    /* Espace sous le titre */
     padding-bottom: 0.5rem;
-    /* Espace pour la bordure */
     border-bottom: 2px solid #ecf0f1;
-    /* Ligne de séparation */
     font-size: 1.3rem;
-    /* Taille de police */
 }
 
-/* Section About Me */
 .about-content {
     display: flex;
-    /* Flexbox pour layout */
     gap: 1.5rem;
-    /* Espace entre texte et image */
     align-items: flex-start;
-    /* Alignement en haut */
 }
 
 .about-text {
     flex: 1;
-    /* Prend l'espace disponible */
 }
 
 .about-image {
     flex-shrink: 0;
-    /* Empêche la réduction de l'image */
 }
 
 .about-image img {
     max-width: 100%;
-    /* Image responsive */
     height: auto;
-    /* Maintient les proportions */
     border-radius: 6px;
-    /* Coins arrondis */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    /* Ombre subtile */
 }
 
-/* Section Madagascar */
 .madagascar-content {
     display: flex;
-    /* Flexbox pour layout */
     gap: 1.5rem;
-    /* Espace entre image et texte */
     align-items: flex-start;
-    /* Alignement en haut */
 }
 
 .madagascar-text {
     flex: 1;
-    /* Prend l'espace disponible */
 }
 
 .madagascar-image {
     flex-shrink: 0;
-    /* Empêche la réduction de l'image */
 }
 
 .madagascar-image img {
     max-width: 100%;
-    /* Image responsive */
     height: auto;
-    /* Maintient les proportions */
     border-radius: 6px;
-    /* Coins arrondis */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    /* Ombre subtile */
 }
 
-/* Section Resources */
 .resources ul {
     list-style: none;
-    /* Supprime les puces */
     padding-left: 0;
-    /* Supprime le padding gauche */
 }
 
 .resources li {
     margin-bottom: 0.75rem;
-    /* Espace entre les éléments */
     padding-bottom: 0.75rem;
-    /* Espace interne bas */
     border-bottom: 1px solid #ecf0f1;
-    /* Ligne de séparation */
 }
 
 .resources li:last-child {
     margin-bottom: 0;
-    /* Pas d'espace pour le dernier */
     border-bottom: none;
-    /* Pas de bordure pour le dernier */
 }
 
 .resources a {
     color: #3498db;
-    /* Couleur bleue pour les liens */
     text-decoration: none;
-    /* Pas de soulignement */
     transition: color 0.3s ease;
-    /* Transition fluide */
     display: block;
-    /* Lien en bloc */
     padding: 0.25rem 0;
-    /* Espacement interne */
 }
 
 .resources a:hover {
     color: #2980b9;
-    /* Couleur plus foncée au survol */
     text-decoration: underline;
-    /* Soulignement au survol */
 }
 
-/* Pied de page */
 footer {
     background-color: #2c3e50;
-    /* Même couleur que header */
     color: white;
-    /* Texte blanc */
     text-align: center;
-    /* Centrage du texte */
     padding: 1.5rem 0;
-    /* Espacement vertical */
     margin-top: 2rem;
-    /* Espace au-dessus */
 }
 
 footer p {
     margin-bottom: 0.5rem;
-    /* Espace entre les paragraphes */
 }
 
 footer p:last-child {
     margin-bottom: 0;
-    /* Pas d'espace pour le dernier */
 }
 
-/* Media Queries pour le responsive design */
 @media (max-width: 768px) {
-    /* Styles pour tablettes et mobiles */
     .content-grid {
         grid-template-columns: 1fr;
-        /* Une seule colonne */
         gap: 1.5rem;
-        /* Espacement réduit */
     }
     
     .about-content,
     .madagascar-content {
         flex-direction: column;
-        /* Colonne sur mobile */
     }
     
     nav ul {
         gap: 1rem;
-        /* Espacement réduit */
     }
     
     header h1 {
         font-size: 1.3rem;
-        /* Taille de police réduite */
     }
     
     .container {
         padding: 0 15px;
-        /* Padding réduit */
     }
 }
 
 @media (max-width: 480px) {
-    /* Styles pour petits mobiles */
     nav ul {
         flex-direction: column;
-        /* Navigation en colonne */
         align-items: center;
-        /* Centrage */
         gap: 0.5rem;
-        /* Espacement minimal */
     }
     
     .card {
         padding: 1rem;
-        /* Padding réduit */
     }
     
     header h1 {
         font-size: 1.1rem;
-        /* Taille de police plus petite */
     }
 }
