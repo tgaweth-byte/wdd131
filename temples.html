@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- Déclaration du type de document HTML5 -->
+<html lang="fr">
+<!-- Langue française pour l'accessibilité -->
+<head>
+    <!-- En-tête avec métadonnées -->
+    <meta charset="UTF-8">
+    <!-- Encodage UTF-8 pour caractères internationaux -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport pour le responsive design -->
+    <meta name="description" content="Album photo responsive - WDD131 Assignment">
+    <!-- Description pour le SEO -->
+    <meta name="keywords" content="album, photo, responsive, WDD131">
+    <!-- Mots-clés pour le SEO -->
+    <meta name="author" content="Gaweth Thalon">
+    <!-- Auteur du site -->
+    <title>Album Photo - WDD131</title>
+    <!-- Titre de la page -->
+    <link rel="stylesheet" href="/styles/temples.css">
+    <link rel="stylesheet" href="/styles/temples-large.css" media="(min-width: 1024px)">
+    <!-- Lien vers la feuille de style -->
+    <script src="/scripts/temples.js" defer></script>
+    <!-- Lien vers le script JavaScript (chargé en différé) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Corps de la page -->
+    <header>
+        <!-- En-tête de la page -->
+        <div class="container">
+            <!-- Conteneur pour centrage -->
+            <h1>Temple Album</h1>
+            <!-- Titre principal -->
+            <nav>
+                <!-- Navigation principale -->
+                <button class="hamburger" id="hamburger">
+                    <!-- Bouton hamburger pour mobile -->
+                    <span></span>
+                    <!-- Barre du menu hamburger -->
+                    <span></span>
+                    <!-- Barre du menu hamburger -->
+                    <span></span>
+                    <!-- Barre du menu hamburger -->
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <!-- Menu de navigation -->
+                    <li><a href="#accueil">Home</a></li>
+                    <!-- Lien vers section accueil -->
+                    <li><a href="#galerie">Old</a></li>
+                    <!-- Lien vers section galerie -->
+                    <li><a href="#apropos">New</a></li>
+                    <!-- Lien vers section à propos -->
+                    <li><a href="#contact">Large</a></li>
+                    <!-- Lien vers section contact -->
+                    <li><a href="#contact">Small</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Contenu principal -->
+        <section id="galerie" class="gallery">
+            <!-- Section galerie -->
+            <h2>Home</h2>
+            <!-- Titre de section -->
+            <div class="gallery-grid">
+                <!-- Grille pour les images -->
+                
+                <figure class="photo-card">
+                    <!-- Figure pour une image avec légende -->
+                    <img src="https://picsum.photos/400/300?random=1" 
+                         alt="Paysage naturel avec montagnes" 
+                         loading="lazy">
+                    <!-- Image avec texte alternatif et chargement lazy -->
+                    <figcaption>Paysage montagneux</figcaption>
+                    <!-- Légende de l'image -->
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=2" 
+                         alt="Ville moderne avec gratte-ciels" 
+                         loading="lazy">
+                    <figcaption>Ville moderne</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=3" 
+                         alt="Forêt tropicale verte" 
+                         loading="lazy">
+                    <figcaption>Forêt tropicale</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=4" 
+                         alt="Plage de sable fin et mer bleue" 
+                         loading="lazy">
+                    <figcaption>Plage paradisiaque</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=5" 
+                         alt="Desert avec dunes de sable" 
+                         loading="lazy">
+                    <figcaption>Dunes du désert</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=6" 
+                         alt="Lac de montagne reflétant le ciel" 
+                         loading="lazy">
+                    <figcaption>Lac de montagne</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=7" 
+                         alt="Lac de montagne reflétant le ciel" 
+                         loading="lazy">
+                    <figcaption>Lac de montagne</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=8" 
+                         alt="Lac de montagne reflétant le ciel" 
+                         loading="lazy">
+                    <figcaption>Lac de montagne</figcaption>
+                </figure>
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/300?random=9" 
+                         alt="Lac de montagne reflétant le ciel" 
+                         loading="lazy">
+                    <figcaption>Lac de montagne</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="apropos" class="about">
+            <!-- Section à propos -->
+            <h2>About This Album</h2>
+            <p>This photo album features a collection of responsive images using the latest web technologies.</p>
+            <!-- Description de l'album -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Pied de page -->
+        <div class="container">
+            <p>&copy; <span id="currentyear"></span> 🌟Gaweth Thalon🌟</p>
+            <!-- Copyright avec année dynamique -->
+            <p>Dernière modification: <span id="lastmodified"></span></p>
+            <!-- Date de modification dynamique -->
+        </div>
+    </footer>
+</body>
+</html>

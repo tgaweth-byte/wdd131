@@ -1,0 +1,99 @@
+/* Media Query pour ORDINATEURS - à charger APRÈS temples.css */
+@media (min-width: 1024px) {
+    /* Conteneur principal pour desktop */
+    .container {
+        max-width: 1400px;
+        padding: 0 40px;
+    }
+
+    /* En-tête desktop */
+    header {
+        padding: 1.5rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    /* Navigation DESKTOP - Cacher hamburger, afficher menu horizontal */
+    .hamburger {
+        display: none !important; /* Cacher hamburger sur desktop */
+    }
+
+    .nav-menu {
+        display: flex !important; /* Afficher menu horizontal */
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        box-shadow: none;
+        gap: 3rem;
+    }
+
+    .nav-menu a {
+        padding: 0.75rem 1.5rem;
+        border-bottom: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+    }
+
+    .nav-menu a:hover {
+        background-color: #34495e;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Galerie desktop */
+    .gallery {
+        padding: 3rem 0;
+    }
+
+    .gallery h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .photo-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .photo-card img {
+        height: 250px;
+    }
+
+    .photo-card figcaption {
+        padding: 1.5rem;
+    }
+
+    /* Section À Propos desktop */
+    .about {
+        padding: 3rem;
+        margin: 3rem 0;
+    }
+
+    .about h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Pied de page desktop */
+    footer {
+        padding: 2rem 0;
+    }
+}
+
+/* Media Query pour GRANDS ÉCRANS */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur très grands écrans */
+    }
+}
