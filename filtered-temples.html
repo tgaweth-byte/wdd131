@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - Filtered View</title>
+    <meta name="description" content="Explore temples from around the world with interactive filtering options">
+    <meta name="author" content="Gaweth Thalon">
+    
+    <link rel="stylesheet" href="/styles/filtered-temple.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+    
+    <script defer src="/scripts/filtered-temple.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="handler">Temple Album</h1>
+        <button id="hambutton" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span>≡</span>
+        </button>
+        <nav id="navmenu">
+            <a href="#" data-filter="home">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Gallery</h2>
+        <div class="res-grid">
+            <!-- Les cartes de temples seront générées dynamiquement ici -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> 🌟 Gaweth Thalon 🌟</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

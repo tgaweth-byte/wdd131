@@ -1,0 +1,248 @@
+:root {
+    --charcoal: rgb(30, 30, 30);
+    --slate: rgb(68, 88, 104);
+    --slate-1: rgba(68, 88, 104, 0.1);
+    --slate-7: rgba(68, 88, 104, 0.7);
+    --stone: rgba(120, 113, 108, 1);
+    --sand: rgba(236, 230, 220, 1);
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    padding: 0;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+  }
+  
+  header {
+    background-color: var(--charcoal);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  h1 {
+    padding: 1.5rem;
+  }
+  
+  #hambutton {
+    display: block;
+    font-size: 3rem;
+    background-color: var(--charcoal);
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 0 .5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+  }
+  
+  #hambutton::before {
+    content: "≡";
+  }
+  
+  #hambutton.show::before {
+    content: "X";
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: none;
+    font-size: 2rem;
+  }
+  
+  nav a:hover,
+  nav a:active {
+    color: var(--sand);
+    font-weight: 700;
+  }
+  
+  nav a:hover~#navmenu~#hambutton {
+    background-color: var(--sand);
+    color: #000;
+  }
+  
+  nav.show {
+    width: 100%;
+  }
+  
+  h1.show {
+    display: none;
+  }
+  
+  .show a {
+    display: block;
+    text-align: center;
+  }
+  
+  main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 1rem;
+  }
+  
+  h2 {
+    color: var(--charcoal);
+    text-align: center;
+    margin-bottom: 1rem;
+  
+  }
+  
+  .res-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+  }
+  
+  section {
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: .5rem;
+  }
+  
+  section p {
+    font-size: .8rem;
+    text-align: center;
+  
+  }
+  
+  section img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border: 1px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 10px #333;
+  }
+  
+  
+  
+  footer {
+    background-color: var(--charcoal);
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .smaller {
+    font-size: smaller;
+  }
+  
+  .label {
+    font-weight: 700;
+    font-size: smaller;
+    font-variant: small-caps;
+    color: var(--charcoal);
+  }
+  
+  @media screen and (min-width: 880px) {
+    h1.handler {
+      display: block;
+      width: 100%;
+    }
+  
+    #hambutton {
+      display: none;
+    }
+  
+    nav {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  
+    nav a {
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+  /* AJOUTS AU CSS EXISTANT */
+
+/* Style pour les filtres actifs */
+nav a.active {
+  background-color: var(--sand);
+  color: var(--charcoal) !important;
+  font-weight: 700;
+}
+
+/* Amélioration de l'accessibilité du bouton hamburger */
+#hambutton span {
+  font-size: 2rem;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#hambutton.show span {
+  transform: rotate(90deg);
+}
+
+/* États focus pour l'accessibilité */
+nav a:focus {
+  outline: 2px solid var(--sand);
+  outline-offset: 2px;
+}
+
+#hambutton:focus {
+  outline: 2px solid var(--sand);
+  outline-offset: 2px;
+}
+
+/* Animation fluide pour les cartes */
+section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 879px) {
+  nav:not(.show) {
+      display: none;
+  }
+  
+  nav.show {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--charcoal);
+      z-index: 1000;
+  }
+}
+
+/* Loading state */
+.res-grid {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.res-grid.loading {
+  opacity: 0.6;
+}

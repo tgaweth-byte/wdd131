@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Album photo responsive - WDD131 Assignment">
+    <meta name="keywords" content="album, photo, responsive, WDD131">
+    <meta name="author" content="Votre Nom">
+    <title>Album Photo - WDD131</title>
+    <link rel="stylesheet" href="/week04/styles/lazyloading.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mon Album Photo</h1>
+            <nav>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="galerie" class="gallery">
+            <h2>Ma Galerie Photo</h2>
+            <div class="gallery-grid">
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/600?random=1" 
+                         alt="Paysage naturel avec montagnes" 
+                         loading="lazy">
+                    <figcaption>Paysage montagneux</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/700?random=2" 
+                         alt Ville moderne avec gratte-ciels" 
+                         loading="lazy">
+                    <figcaption>Ville moderne</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/800?random=3" 
+                         alt="Forêt tropicale verte" 
+                         loading="lazy">
+                    <figcaption>Forêt tropicale</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/650?random=4" 
+                         alt="Plage de sable fin et mer bleue" 
+                         loading="lazy">
+                    <figcaption>Plage paradisiaque</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/400/750?random=5" 
+                         alt="Desert avec dunes de sable" 
+                         loading="lazy">
+                    <figcaption>Dunes du désert</figcaption>
+                </figure>
+
+                <figure class="photo-card">
+                    <img src="https://picsum.photos/850/300?random=6" 
+                         alt="Lac de montagne reflétant le ciel" 
+                         loading="lazy">
+                    <figcaption>Lac de montagne</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="apropos" class="about">
+            <h2>À Propos de Cet Album</h2>
+            <p>Cet album photo présente une collection d'images responsives utilisant les dernières technologies web.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentyear"></span> Album Photo - WDD131</p>
+            <p>Dernière modification: <span id="lastmodified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
