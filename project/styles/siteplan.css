@@ -103,36 +103,52 @@ header p {
     margin-bottom: var(--spacing-sm);
 }
 
-/* Color Schema Section */
-.color-scheme {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
+/* Color Schema Styles */
+.color-haiti-blue {
+    background-color: #00209F;
+    color: white;
+}
+
+.color-sun-gold {
+    background-color: #FFCC08;
+    color: #333333;
+}
+
+.color-ivory-white {
+    background-color: #F5F5F5;
+    color: #333333;
+    border: 1px solid #CCCCCC;
+}
+
+.color-charcoal-black {
+    background-color: #333333;
+    color: white;
 }
 
 .color-sample {
     padding: var(--spacing-md);
     border-radius: 6px;
-    color: white;
     display: flex;
     flex-direction: column;
     min-height: 120px;
     justify-content: center;
 }
 
-.color-sample span {
+.color-name {
+    font-weight: bold;
+    font-size: 1.1rem;
     margin-bottom: 4px;
 }
 
-.color-sample span:first-child {
-    font-weight: bold;
-    font-size: 1.1rem;
+.color-hex {
+    font-family: monospace;
+    margin-bottom: 4px;
 }
 
-.color-sample:nth-child(3),
-.color-sample:nth-child(4) {
-    color: var(--sun-gold);
+.color-usage {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 8px;
 }
 
 /* Typography Section */
