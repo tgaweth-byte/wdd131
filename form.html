@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review</title>
+  <meta name="description" content="Product review form example for the week05 in WDD 131">
+  <meta name="author" content="Gaweth Thalon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script defer src="scripts/form.js"></script>
+  <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+  <main>
+    <form action="review.html" method="get">
+
+      <div class="item">
+        <label for="product_name">Product Name <span class="required">*</span></label>
+        <select id="product_name" name="product_name" required>
+          <option value="" selected disabled>Choose a Product ...</option>
+          <!-- Les options seront dynamiquement ajoutées par JavaScript -->
+        </select>
+      </div>
+
+      <div class="item">
+        <p>Overall Rating <span class="required">*</span></p>
+        <div class="radio-group">
+          <label for="overall-1">★</label>
+          <label for="overall-2">★★</label>
+          <label for="overall-3">★★★</label>
+          <label for="overall-4">★★★★</label>
+          <label for="overall-5">★★★★★</label>
+          <input type="radio" id="overall-1" name="overall" value="1" required>
+          <input type="radio" id="overall-2" name="overall" value="2" required>
+          <input type="radio" id="overall-3" name="overall" value="3" required>
+          <input type="radio" id="overall-4" name="overall" value="4" required>
+          <input type="radio" id="overall-5" name="overall" value="5" required>
+        </div>
+      </div>
+
+      <div class="item">
+        <label>Date of Installation <span class="required">*</span>
+          <input type="date" id="install" name="install" required></label>
+      </div>
+
+      <div class="item">
+        <p>Which features did you find useful in the product?<br>
+          <em>(Check all that apply)</em>
+        </p>
+        <div class="checkbox-group">
+          <input type="checkbox" id="durability" name="features" value="durability">
+          <label for="durability">Durability</label>
+          <input type="checkbox" id="ease" name="features" value="ease">
+          <label for="ease">Ease of Use</label>
+          <input type="checkbox" id="performance" name="features" value="performance">
+          <label for="performance">Performance</label>
+          <input type="checkbox" id="design" name="features" value="design">
+          <label for="design">Design</label>
+        </div>
+      </div>
+
+      <div class="item">
+        <label for="review">Written Review <span class="smaller">(Optional)</span></label>
+        <textarea id="review" name="review"></textarea>
+      </div>
+
+      <div class="item">
+        <label for="user">Your Name <span class="smaller">(Optional)</span></label>
+        <input type="text" id="user" name="user">
+      </div>
+
+      <input type="submit" value="Post Review">
+
+    </form>
+  </main>
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🇭🇹 Gaweth Thalon 🇭🇹 Haïti</p>
+    <p>Last Modification: <span id="lastmodified"></span></p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+:root {
+    --back1: #2c3e50; /* Dark blue-gray */
+    --back2: #ecf0f1; /* Light gray */
+    --border: #bdc3c7; /* Soft gray */
+    --text: #2c3e50; /* Dark blue-gray */
+    --highlight: #3498db; /* Soft blue */
+    --required: #e74c3c; /* Soft red */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background-color: var(--back2);
+  }
+  
+  header,
+  footer {
+    color: white;
+    background-color: var(--back1);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  form {
+    margin: 1rem auto;
+    border: 1px solid var(--border);
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    max-width: 500px;
+  }
+  
+  .item {
+    margin-bottom: 1rem;
+  }
+  
+  label,
+  .item p {
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  
+  input[type="text"],
+  input[type="checkbox"],
+  input[type="date"],
+  input[type="radio"],
+  textarea,
+  select {
+    margin-top: .25rem;
+    padding: .5rem;
+    border: 1px solid var(--border);
+    width: 100%;
+    background-color: var(--back2);
+    color: var(--text);
+  }
+  
+  input:focus {
+    outline: 1px solid var(--highlight);
+  }
+  
+  input[type="checkbox"],
+  [type="radio"] {
+    width: 25px;
+    height: 25px;
+  }
+  
+  input[type="submit"] {
+    font-weight: 700;
+    font-size: larger;
+    width: 100%;
+    padding: .5rem;
+    background-color: var(--highlight);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #2980b9; /* Slightly darker blue */
+  }
+  
+  textarea {
+    height: 6rem;
+  }
+  
+  .radio-group {
+    margin-top: .25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    width: max-content;
+  }
+  
+  .checkbox-group label {
+    margin-left: .5rem;
+  }
+  
+  .smaller {
+    font-size: .7rem;
+    color: var(--highlight);
+  }
+  
+  .required {
+    color: var(--required);
+    font-weight: bold;
+  }
+  
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
