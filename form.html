@@ -26,31 +26,26 @@
 
       <div class="item">
         <label for="product_name">Product Name <span class="required">*</span></label>
-        <select id="product_name" name="product_name" required>
-          <option value="" selected disabled>Choose a Product ...</option>
+    <select id="product_name" name="product_name" required>
+          <option value="">Choose a Product ...</option>
           <!-- Les options seront dynamiquement ajoutées par JavaScript -->
-        </select>
+    </select>
       </div>
 
       <div class="item">
         <p>Overall Rating <span class="required">*</span></p>
         <div class="radio-group">
-          <label for="overall-1">★</label>
-          <label for="overall-2">★★</label>
-          <label for="overall-3">★★★</label>
-          <label for="overall-4">★★★★</label>
-          <label for="overall-5">★★★★★</label>
-          <input type="radio" id="overall-1" name="overall" value="1" required>
-          <input type="radio" id="overall-2" name="overall" value="2" required>
-          <input type="radio" id="overall-3" name="overall" value="3" required>
-          <input type="radio" id="overall-4" name="overall" value="4" required>
-          <input type="radio" id="overall-5" name="overall" value="5" required>
+          <label for="overall-1">★<input type="radio" id="overall-1" name="overall" value="1" required></label>
+          <label for="overall-2">★★<input type="radio" id="overall-2" name="overall" value="2" required></label>
+          <label for="overall-3">★★★<input type="radio" id="overall-3" name="overall" value="3" required></label>
+          <label for="overall-4">★★★★<input type="radio" id="overall-4" name="overall" value="4" required></label>
+          <label for="overall-5">★★★★★<input type="radio" id="overall-5" name="overall" value="5" required></label> 
         </div>
       </div>
 
       <div class="item">
-        <label>Date of Installation <span class="required">*</span>
-          <input type="date" id="install" name="install" required></label>
+        <label>Date of Installation<span class="required">*</span><input type="date" id="install" name="install" required></label>
+          
       </div>
 
       <div class="item">
@@ -59,7 +54,7 @@
         </p>
         <div class="checkbox-group">
           <input type="checkbox" id="durability" name="features" value="durability">
-          <label for="durability">Durability</label>
+          <label >Durability</label>
           <input type="checkbox" id="ease" name="features" value="ease">
           <label for="ease">Ease of Use</label>
           <input type="checkbox" id="performance" name="features" value="performance">
