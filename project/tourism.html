@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourisme en Haïti - Découverte Haïti</title>
+    <meta name="description" content="Guide touristique complet d'Haïti : sites incontournables, conseils pratiques et itinéraires">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/tourism.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/trip-planner.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🇭🇹 Découverte Haïti</h1>
+                <p>Patrimoine & Culture</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="geography.html">Géographie</a></li>
+                    <li><a href="history.html">Histoire</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="tourism.html" class="active">Tourisme</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Tourisme en Haïti</h1>
+        
+        <section class="intro-section">
+            <p>Découvrez la beauté cachée d'Haïti : des plages paradisiaques aux sites historiques classés UNESCO, en passant par une culture vibrante et une cuisine savoureuse. Notre guide vous aidera à planifier le voyage de vos rêves.</p>
+        </section>
+
+        <!-- Top Destinations -->
+        <section class="top-destinations">
+            <h2>Destinations Incontournables</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="images/citadelle.webp" alt="Citadelle La Ferrière" loading="lazy">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Citadelle La Ferrière</h3>
+                        <p>Forteresse historique classée UNESCO, offrant une vue imprenable sur la région nord.</p>
+                        <div class="destination-tags">
+                            <span class="tag historical">Historique</span>
+                            <span class="tag unesco">UNESCO</span>
+                        </div>
+                        <button class="btn-details" data-destination="citadelle">Détails</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="images/jacmel-beach.webp" alt="Plage de Jacmel" loading="lazy">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Jacmel</h3>
+                        <p>Ville coloniale charmante connue pour son carnaval et son artisanat de masques en papier mâché.</p>
+                        <div class="destination-tags">
+                            <span class="tag beach">Plage</span>
+                            <span class="tag culture">Culture</span>
+                        </div>
+                        <button class="btn-details" data-destination="jacmel">Détails</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="images/labadee.webp" alt="Labadee" loading="lazy">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Labadee</h3>
+                        <p>Station balnéaire privée offrant des plages de sable blanc et des activités nautiques.</p>
+                        <div class="destination-tags">
+                            <span class="tag beach">Plage</span>
+                            <span class="tag luxury">Luxe</span>
+                        </div>
+                        <button class="btn-details" data-destination="labadee">Détails</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="images/pic-macaya.webp" alt="Parc National Macaya" loading="lazy">
+                    </div>
+                    <div class="destination-info">
+                        <h3>Parc National Macaya</h3>
+                        <p>Réserve de biosphère abritant une biodiversité unique et des paysages montagneux spectaculaires.</p>
+                        <div class="destination-tags">
+                            <span class="tag nature">Nature</span>
+                            <span class="tag hiking">Randonnée</span>
+                        </div>
+                        <button class="btn-details" data-destination="macaya">Détails</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Planificateur de Voyage -->
+        <section class="trip-planner">
+            <h2>Planificateur de Voyage</h2>
+            <div class="planner-container">
+                <div class="planner-form">
+                    <h3>Créez votre itinéraire</h3>
+                    <div class="form-group">
+                        <label for="trip-duration">Durée du séjour:</label>
+                        <select id="trip-duration">
+                            <option value="3">3 jours</option>
+                            <option value="5">5 jours</option>
+                            <option value="7" selected>7 jours</option>
+                            <option value="10">10 jours</option>
+                            <option value="14">14 jours</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Intérêts:</label>
+                        <div class="interests-checkboxes">
+                            <label><input type="checkbox" name="interest" value="history"> Histoire</label>
+                            <label><input type="checkbox" name="interest" value="beach"> Plages</label>
+                            <label><input type="checkbox" name="interest" value="nature"> Nature</label>
+                            <label><input type="checkbox" name="interest" value="culture"> Culture</label>
+                            <label><input type="checkbox" name="interest" value="adventure"> Aventure</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Budget:</label>
+                        <select id="budget">
+                            <option value="economy">Économique</option>
+                            <option value="midrange" selected>Moyen</option>
+                            <option value="luxury">Luxe</option>
+                        </select>
+                    </div>
+                    
+                    <button id="generateItinerary" class="btn">Générer l'itinéraire</button>
+                </div>
+                
+                <div class="planner-result" id="plannerResult">
+                    <h3>Votre Itinéraire</h3>
+                    <div id="itineraryContent">
+                        <p>Sélectionnez vos préférences et cliquez sur "Générer l'itinéraire"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conseils Pratiques -->
+        <section class="practical-tips">
+            <h2>Conseils Pratiques</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>📋 Formalités</h3>
+                    <ul>
+                        <li>Passeport valide 6 mois après le retour</li>
+                        <li>Visa non requis pour séjour < 90 jours</li>
+                        <li>Vaccination fièvre jaune recommandée</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>💰 Argent</h3>
+                    <ul>
+                        <li>Devise: Gourde haïtienne (HTG)</li>
+                        <li>Dollars US acceptés partout</li>
+                        <li>Cartes crédit limitées aux hôtels</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>🚗 Transport</h3>
+                    <ul>
+                        <li>Taxis collectifs: "tap-tap"</li>
+                        <li>Location voiture avec chauffeur recommandée</li>
+                        <li>Vols intérieurs disponibles</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>🏨 Hébergement</h3>
+                    <ul>
+                        <li>Hôtels 3-5 étoiles à Port-au-Prince</li>
+                        <li>Écolodges en province</li>
+                        <li>Réservation recommandée haute saison</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meilleure Période -->
+        <section class="best-time">
+            <h2>Quand Partir ?</h2>
+            <div class="season-calendar">
+                <div class="season">
+                    <h3>Haute Saison</h3>
+                    <p>Décembre - Avril</p>
+                    <p class="season-desc">Saison sèche, températures agréables</p>
+                </div>
+                <div class="season">
+                    <h3>Basse Saison</h3>
+                    <p>Mai - Novembre</p>
+                    <p class="season-desc">Saison des pluies, moins de touristes</p>
+                </div>
+                <div class="season">
+                    <h3>Événements</h3>
+                    <p>Février (Carnaval)</p>
+                    <p class="season-desc">Défilés colorés, réservation anticipée</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gastronomie Touristique -->
+        <section class="food-tourism">
+            <h2>Expériences Culinaires</h2>
+            <div class="food-experiences">
+                <div class="food-card">
+                    <h3>Marchés Locaux</h3>
+                    <p>Découvrez les produits frais et l'artisanat alimentaire dans les marchés traditionnels.</p>
+                </div>
+                <div class="food-card">
+                    <h3>Cours de Cuisine</h3>
+                    <p>Apprenez à préparer des plats haïtiens traditionnels avec des chefs locaux.</p>
+                </div>
+                <div class="food-card">
+                    <h3>Restaurants</h3>
+                    <p>Du street food aux restaurants gastronomiques, explorez toute la diversité culinaire.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galerie Touristique -->
+        <section class="tourism-gallery">
+            <h2>Galerie Touristique</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="images/tourism-beach1.webp" alt="Plage haïtienne" loading="lazy">
+                    <p>Plages de sable blanc</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/geography-mountains.webp" alt="Montagnes haïtiennes" loading="lazy">
+                    <p>Paysages montagneux</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/tourism-market.webp" alt="Marché haïtien" loading="lazy">
+                    <p>Marchés colorés</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/tourism-art.webp" alt="Art haïtien" loading="lazy">
+                    <p>Artisanat local</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foire aux Questions -->
+        <section class="faq-section">
+            <h2>Questions Fréquentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Haïti est-il sûr pour les touristes ?</button>
+                    <div class="faq-answer">
+                        <p>Comme dans de nombreuses destinations, il est recommandé de faire preuve de prudence, d'éviter certains quartiers et de voyager avec des guides locaux expérimentés. La plupart des sites touristiques sont sécurisés.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Quelle est la meilleure façon de se déplacer ?</button>
+                    <div class="faq-answer">
+                        <p>Pour les touristes, il est recommandé de louer une voiture avec chauffeur ou d'utiliser les services de tour-opérateurs locaux. Les transports en commun peuvent être difficiles pour les non-initiés.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Faut-il parler créole ou français ?</button>
+                    <div class="faq-answer">
+                        <p>Le français est compris dans les zones touristiques, mais apprendre quelques mots de créole est toujours apprécié par les habitants. Les guides touristiques parlent généralement anglais et français.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Découverte Haïti</h3>
+                    <p>Site éducatif dédié à la promotion du patrimoine haïtien</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="tourism.html">Tourisme</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@decouvertehaiti.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Découverte Haïti. Tous droits réservés.</p>
+                <p>Dernière modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation hamburger
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+            
+            // Update dates in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = document.lastModified;
+            
+            // Destination details
+            const detailButtons = document.querySelectorAll('.btn-details');
+            const destinationInfo = {
+                citadelle: "Citadelle La Ferrière: Construite entre 1805-1820. Tarif: 25$. Guide obligatoire. Meilleure période: Décembre-Avril. Durée visite: 3-4 heures.",
+                jacmel: "Jacmel: Distance Port-au-Prince: 3h. Spécialités: Masques carnaval, plages. Événement: Carnaval de Jacmel (février). Hébergement: Guesthouses et hôtels.",
+                labadee: "Labadee: Station privée Royal Caribbean. Activités: Plage, tyrolienne, kayak. Accès: Croisière ou excursion organisée.",
+                macaya: "Parc Macaya: Guide obligatoire. Difficulté: Moyenne à difficile. Biodiversité: 141 espèces d'oiseaux. Camping possible."
+            };
+            
+            detailButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const destination = button.dataset.destination;
+                    alert(destinationInfo[destination]);
+                });
+            });
+            
+            // Trip planner
+            const generateBtn = document.getElementById('generateItinerary');
+            const itineraryContent = document.getElementById('itineraryContent');
+            
+            generateBtn.addEventListener('click', () => {
+                const duration = document.getElementById('trip-duration').value;
+                const budget = document.getElementById('budget').value;
+                const interests = Array.from(document.querySelectorAll('input[name="interest"]:checked'))
+                    .map(cb => cb.value);
+                
+                // Generate itinerary based on selections
+                let itinerary = `<h4>Itinéraire ${duration} jours - Budget ${budget}</h4>`;
+                itinerary += `<p><strong>Intérêts sélectionnés:</strong> ${interests.join(', ')}</p>`;
+                itinerary += `<div class="day-plans">`;
+                
+                // Sample itinerary generation logic
+                if (duration == '3') {
+                    itinerary += `
+                        <div class="day">
+                            <h5>Jour 1: Arrivée à Port-au-Prince</h5>
+                            <p>Visite du Musée du Panthéon National</p>
+                        </div>
+                        <div class="day">
+                            <h5>Jour 2: Citadelle La Ferrière</h5>
+                            <p>Excursion journée complète</p>
+                        </div>
+                        <div class="day">
+                            <h5>Jour 3: Départ</h5>
+                            <p>Shopping d'artisanat local</p>
+                        </div>
+                    `;
+                } else if (duration == '7') {
+                    itinerary += `
+                        <div class="day">
+                            <h5>Jours 1-2: Port-au-Prince</h5>
+                            <p>Musées, art, culture urbaine</p>
+                        </div>
+                        <div class="day">
+                            <h5>Jours 3-4: Nord</h5>
+                            <p>Citadelle, plages du Nord</p>
+                        </div>
+                        <div class="day">
+                            <h5>Jours 5-6: Jacmel</h5>
+                            <p>Plages, artisanat, architecture</p>
+                        </div>
+                        <div class="day">
+                            <h5>Jour 7: Retour</h5>
+                            <p>Souvenirs et départ</p>
+                        </div>
+                    `;
+                }
+                
+                itinerary += `</div>`;
+                
+                // Add budget tips
+                if (budget === 'economy') {
+                    itinerary += `<p class="budget-tip"><strong>Conseil budget:</strong> Privilégiez les guesthouses et les transports collectifs.</p>`;
+                } else if (budget === 'luxury') {
+                    itinerary += `<p class="budget-tip"><strong>Conseil budget:</strong> Hôtels 5 étoiles et chauffeur privé recommandés.</p>`;
+                }
+                
+                itineraryContent.innerHTML = itinerary;
+                
+                // Save itinerary to localStorage
+                const itineraryData = {
+                    duration: duration,
+                    budget: budget,
+                    interests: interests,
+                    generatedAt: new Date().toISOString()
+                };
+                
+                localStorage.setItem('lastItinerary', JSON.stringify(itineraryData));
+            });
+            
+            // Load last itinerary if exists
+            const lastItinerary = JSON.parse(localStorage.getItem('lastItinerary'));
+            if (lastItinerary) {
+                console.log('Dernier itinéraire sauvegardé:', lastItinerary);
+            }
+            
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+            
+            // Initialize all FAQ answers as hidden
+            document.querySelectorAll('.faq-answer').forEach(answer => {
+                answer.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

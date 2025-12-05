@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découverte d'Haïti - Patrimoine et Culture</title>
+    <meta name="description" content="Site éducatif sur la culture, l'histoire et le tourisme en Haïti">
+    <meta name="keywords" content="Haïti, culture, histoire, tourisme, patrimoine, Caraïbes">
+    <meta name="author" content="Gaweth Thalon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <!-- Header avec navigation -->
+    <header>
+        <div class="container">
+            <div class="logo"> 
+                <a href="index.html" class="nav-logo"><h1>🇭🇹 Découverte Haïti</h1>
+                </a>
+                <p>Patrimoine & Culture</p>
+                
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="geography.html">Géographie</a></li>
+                    <li><a href="history.html">Histoire</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="tourism.html">Tourisme</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Bienvenue en Haïti</h2>
+                <p>Découvrez la première république noire indépendante, riche en culture et en histoire</p>
+                <a href="#discover" class="btn">Explorer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Section Introduction -->
+        <section id="discover" class="intro-section">
+            <h2>Perle des Caraïbes</h2>
+            <p>Haïti, officiellement la République d'Haïti, est un État des Grandes Antilles occupant le tiers occidental de l'île d'Hispaniola.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>27,750 km²</h3>
+                    <p>Superficie totale</p>
+                </div>
+                <div class="stat-card">
+                    <h3>11.7 millions</h3>
+                    <p>Habitants (2023)</p>
+                </div>
+                <div class="stat-card">
+                    <h3>1804</h3>
+                    <p>Indépendance</p>
+                </div>
+                <div class="stat-card">
+                    <h3>2 langues</h3>
+                    <p>Créole & Français</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Galerie avec Lazy Loading -->
+        <section class="gallery-section">
+            <h2>Galerie Haïtienne</h2>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="images/hero-haiti.webp" alt="Paysage montagneux d'Haïti" loading="lazy" width="400" height="300">
+                    <figcaption>Montagnes haïtiennes</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/citadelle.webp" alt="Citadelle La Ferrière" loading="lazy" width="400" height="300">
+                    <figcaption>Citadelle La Ferrière</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/labadee.webp" alt="Plage de Labadee" loading="lazy" width="400" height="300">
+                    <figcaption>Plage de Labadee</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/art.webp" alt="Art haïtien" loading="lazy" width="400" height="300">
+                    <figcaption>Art haïtien traditionnel</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Section Actualités avec LocalStorage -->
+        <section class="news-section">
+            <h2>Actualités Culturelles</h2>
+            <div id="news-container"></div>
+            <div class="news-form">
+                <h3>Ajouter une actualité</h3>
+                <form id="newsForm">
+                    <input type="text" id="newsTitle" placeholder="Titre de l'actualité" required>
+                    <textarea id="newsContent" placeholder="Contenu" required></textarea>
+                    <button type="submit" class="btn">Ajouter</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section Interactive -->
+        <section class="interactive-section">
+            <h2>Calculateur de Température</h2>
+            <div class="weather-calculator">
+                <div class="input-group">
+                    <label for="celsius">Température en °C:</label>
+                    <input type="number" id="celsius" placeholder="20">
+                </div>
+                <button id="convertBtn" class="btn">Convertir en °F</button>
+                <div class="result" id="result"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Découverte Haïti</h3>
+                    <p>Site éducatif dédié à la promotion du patrimoine haïtien</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="geography.html">Géographie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@decouvertehaiti.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Découverte Haïti. Tous droits réservés.</p>
+                <p>Dernière modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

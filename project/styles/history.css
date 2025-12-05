@@ -1,0 +1,286 @@
+/* History Page Specific Styles */
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: var(--spacing-lg) 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--primary-blue);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-date {
+    flex: 0 0 120px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    padding: var(--spacing-sm);
+    background-color: var(--white);
+    border: 3px solid var(--primary-blue);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    margin: 0 var(--spacing-md);
+}
+
+.timeline-content {
+    flex: 1;
+    padding: var(--spacing-md);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.timeline-content h3 {
+    color: var(--secondary-red);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Historical Figures */
+.historical-figures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.figure-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.figure-card:hover {
+    transform: translateY(-10px);
+}
+
+.figure-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.figure-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.figure-card:hover .figure-image img {
+    transform: scale(1.1);
+}
+
+.figure-info {
+    padding: var(--spacing-md);
+}
+
+.figure-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.btn-more {
+    background-color: var(--accent-yellow);
+    color: var(--dark-text);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+    transition: var(--transition);
+}
+
+.btn-more:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+/* Periods Grid */
+.periods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.period-card {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border-top: 4px solid var(--secondary-red);
+}
+
+.period-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.period-card ul {
+    margin-left: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.period-card li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Monuments Gallery */
+.monuments-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.monument-item {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.monument-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.monument-item h3 {
+    padding: var(--spacing-sm);
+    color: var(--primary-blue);
+    margin: 0;
+}
+
+.monument-item p {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+    font-size: 0.9rem;
+}
+
+/* Quiz */
+.quiz-container {
+    background-color: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quiz-question {
+    margin-bottom: var(--spacing-lg);
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.quiz-option {
+    padding: var(--spacing-sm);
+    background-color: var(--light-bg);
+    border: 2px solid var(--gray-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.quiz-option:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.quiz-result {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        margin-left: 60px;
+    }
+    
+    .timeline-date {
+        position: absolute;
+        left: -90px;
+        margin: 0;
+    }
+    
+    .historical-figures {
+        grid-template-columns: 1fr;
+    }
+    
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        margin-left: 40px;
+    }
+    
+    .timeline-date {
+        left: -60px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+    .periods-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire d'Haïti - Découverte Haïti</title>
+    <meta name="description" content="Histoire complète d'Haïti de la période précolombienne à nos jours">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/history.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/timeline.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🇭🇹 Découverte Haïti</h1>
+                <p>Patrimoine & Culture</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="geography.html">Géographie</a></li>
+                    <li><a href="history.html" class="active">Histoire</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="tourism.html">Tourisme</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Histoire d'Haïti</h1>
+        
+        <section class="intro-section">
+            <p>Haïti, première république noire indépendante au monde, possède une histoire riche et complexe qui a marqué l'histoire de l'humanité et continue d'inspirer les peuples en lutte pour leur liberté.</p>
+        </section>
+
+        <!-- Timeline Interactive -->
+        <section class="timeline-section">
+            <h2>Frise Chronologique</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">1492</div>
+                    <div class="timeline-content">
+                        <h3>Arrivée de Christophe Colomb</h3>
+                        <p>Christophe Colomb débarque sur l'île qu'il nomme Hispaniola. Les Taïnos, peuple autochtone, y vivent depuis des siècles.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1697</div>
+                    <div class="timeline-content">
+                        <h3>Traité de Ryswick</h3>
+                        <p>La France prend officiellement possession de la partie occidentale de l'île, qu'elle nomme Saint-Domingue.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1791</div>
+                    <div class="timeline-content">
+                        <h3>Révolution Haïtienne</h3>
+                        <p>Début de la révolution des esclaves menée par Toussaint Louverture, Boukman et d'autres leaders.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1804</div>
+                    <div class="timeline-content">
+                        <h3>Indépendance d'Haïti</h3>
+                        <p>Jean-Jacques Dessalines proclame l'indépendance le 1er janvier, créant la première république noire indépendante.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1825</div>
+                    <div class="timeline-content">
+                        <h3>Reconnaissance française</h3>
+                        <p>La France reconnaît l'indépendance d'Haïti en échange d'une indemnité de 150 millions de francs-or.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1915-1934</div>
+                    <div class="timeline-content">
+                        <h3>Occupation américaine</h3>
+                        <p>Les États-Unis occupent Haïti pendant 19 ans pour des raisons économiques et stratégiques.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1957-1986</div>
+                    <div class="timeline-content">
+                        <h3>Ère Duvalier</h3>
+                        <p>François puis Jean-Claude Duvalier dirigent le pays d'une main de fer pendant 29 ans.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2010</div>
+                    <div class="timeline-content">
+                        <h3>Séisme dévastateur</h3>
+                        <p>Un séisme de magnitude 7.0 frappe Port-au-Prince, causant des centaines de milliers de victimes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Figures Historiques -->
+        <section class="figures-section">
+            <h2>Figures Historiques</h2>
+            <div class="historical-figures">
+                <div class="figure-card">
+                    <div class="figure-image">
+                        <img src="images/toussaint.webp" alt="Toussaint Louverture" loading="lazy">
+                    </div>
+                    <div class="figure-info">
+                        <h3>Toussaint Louverture</h3>
+                        <p>(1743-1803) Leader de la Révolution haïtienne, ancien esclave devenu général français.</p>
+                        <button class="btn-more" data-figure="toussaint">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="figure-card">
+                    <div class="figure-image">
+                        <img src="images/dessalines.webp" alt="Jean-Jacques Dessalines" loading="lazy">
+                    </div>
+                    <div class="figure-info">
+                        <h3>Jean-Jacques Dessalines</h3>
+                        <p>(1758-1806) Premier empereur d'Haïti, proclama l'indépendance en 1804.</p>
+                        <button class="btn-more" data-figure="dessalines">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="figure-card">
+                    <div class="figure-image">
+                        <img src="images/henri.webp" alt="Henri Christophe" loading="lazy">
+                    </div>
+                    <div class="figure-info">
+                        <h3>Henri Christophe</h3>
+                        <p>(1767-1820) Roi d'Haïti (1811-1820), fit construire la Citadelle La Ferrière.</p>
+                        <button class="btn-more" data-figure="henri">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Périodes Historiques -->
+        <section class="periods-section">
+            <h2>Périodes Historiques Clés</h2>
+            <div class="periods-grid">
+                <div class="period-card">
+                    <h3>Période Taïno</h3>
+                    <p>Avant l'arrivée des Européens, l'île était peuplée par les Taïnos qui vivaient de l'agriculture et de la pêche.</p>
+                    <ul>
+                        <li>Population estimée à 500,000</li>
+                        <li>Cultures principales : manioc, maïs</li>
+                        <li>Structure sociale hiérarchisée</li>
+                    </ul>
+                </div>
+                <div class="period-card">
+                    <h3>Colonisation française</h3>
+                    <p>Saint-Domingue devient la colonie la plus riche des Amériques grâce aux plantations de sucre et de café.</p>
+                    <ul>
+                        <li>500,000 esclaves africains</li>
+                        <li>Production de 40% du sucre mondial</li>
+                        <li>Société à trois castes</li>
+                    </ul>
+                </div>
+                <div class="period-card">
+                    <h3>Révolution et Indépendance</h3>
+                    <p>La seule révolution d'esclaves réussie qui aboutit à la création d'un État indépendant.</p>
+                    <ul>
+                        <li>1791-1804 : Guerre d'indépendance</li>
+                        <li>Première abolition de l'esclavage</li>
+                        <li>Influence sur les mouvements abolitionnistes</li>
+                    </ul>
+                </div>
+                <div class="period-card">
+                    <h3>Haïti contemporain</h3>
+                    <p>Période marquée par des défis politiques, économiques mais aussi par une résilience remarquable.</p>
+                    <ul>
+                        <li>Première république noire</li>
+                        <li>Contributions culturelles mondiales</li>
+                        <li>Résilience face aux catastrophes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Monuments Historiques -->
+        <section class="monuments-section">
+            <h2>Monuments et Sites Historiques</h2>
+            <div class="monuments-gallery">
+                <div class="monument-item">
+                    <img src="images/citadelle-history.webp" alt="Citadelle La Ferrière" loading="lazy">
+                    <h3>Citadelle La Ferrière</h3>
+                    <p>Forteresse construite par Henri Christophe pour se protéger d'une éventuelle invasion française.</p>
+                </div>
+                <div class="monument-item">
+                    <img src="images/sans-souci.webp" alt="Palais Sans Souci" loading="lazy">
+                    <h3>Palais Sans Souci</h3>
+                    <p>Ancien palais royal d'Henri Christophe, classé au patrimoine mondial de l'UNESCO.</p>
+                </div>
+                <div class="monument-item">
+                    <img src="images/fort-jacques.webp" alt="Fort Jacques" loading="lazy">
+                    <h3>Fort Jacques</h3>
+                    <p>Forteresse construite après l'indépendance pour protéger Port-au-Prince.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Historique -->
+        <section class="quiz-section">
+            <h2>Quiz d'Histoire Haïtienne</h2>
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p id="question-text">En quelle année Haïti a-t-elle proclamé son indépendance ?</p>
+                </div>
+                <div class="quiz-options">
+                    <button class="quiz-option" data-answer="1791">1791</button>
+                    <button class="quiz-option" data-answer="1804">1804</button>
+                    <button class="quiz-option" data-answer="1825">1825</button>
+                    <button class="quiz-option" data-answer="1904">1904</button>
+                </div>
+                <div class="quiz-result" id="quiz-result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Découverte Haïti</h3>
+                    <p>Site éducatif dédié à la promotion du patrimoine haïtien</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="history.html">Histoire</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@decouvertehaiti.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Découverte Haïti. Tous droits réservés.</p>
+                <p>Dernière modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation hamburger
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+            
+            // Update dates in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = document.lastModified;
+            
+            // Figures historiques - modal
+            const figureButtons = document.querySelectorAll('.btn-more');
+            const figureDetails = {
+                toussaint: "Toussaint Louverture, né esclave, devint le principal leader de la Révolution haïtienne. Capturé par les Français, il mourut en prison en France en 1803.",
+                dessalines: "Jean-Jacques Dessalines, ancien esclave, proclama l'indépendance d'Haïti le 1er janvier 1804 et devint le premier empereur sous le nom de Jacques Ier.",
+                henri: "Henri Christophe, ancien esclave et chef militaire, devint président puis roi d'Haïti. Il fit construire la Citadelle La Ferrière, monument classé UNESCO."
+            };
+            
+            figureButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const figure = button.dataset.figure;
+                    alert(figureDetails[figure]);
+                });
+            });
+            
+            // Quiz interactif
+            const quizOptions = document.querySelectorAll('.quiz-option');
+            const quizResult = document.getElementById('quiz-result');
+            
+            quizOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const answer = option.dataset.answer;
+                    
+                    // Reset all buttons
+                    quizOptions.forEach(opt => {
+                        opt.style.backgroundColor = '';
+                        opt.style.color = '';
+                    });
+                    
+                    if (answer === '1804') {
+                        option.style.backgroundColor = '#1B4D3E';
+                        option.style.color = 'white';
+                        quizResult.textContent = 'Correct! Haïti a proclamé son indépendance le 1er janvier 1804.';
+                        quizResult.style.color = '#1B4D3E';
+                    } else {
+                        option.style.backgroundColor = '#D21034';
+                        option.style.color = 'white';
+                        quizResult.textContent = 'Incorrect. La réponse correcte est 1804.';
+                        quizResult.style.color = '#D21034';
+                    }
+                });
+            });
+            
+            // Timeline animation
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            timelineItems.forEach(item => observer.observe(item));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Géographie d'Haïti - Découverte Haïti</title>
+    <meta name="description" content="Découvrez la géographie d'Haïti : relief, climat, régions et villes principales">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/geography.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/map-interactive.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🇭🇹 Découverte Haïti</h1>
+                <p>Patrimoine & Culture</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="geography.html" class="active">Géographie</a></li>
+                    <li><a href="history.html">Histoire</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="tourism.html">Tourisme</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Géographie d'Haïti</h1>
+        
+        <section class="intro-section">
+            <p>Haïti occupe le tiers occidental de l'île d'Hispaniola, partageant sa frontière avec la République Dominicaine à l'est. Sa position stratégique dans les Caraïbes lui confère une diversité géographique remarquable.</p>
+        </section>
+
+        <div class="geography-content">
+            <!-- Carte Interactive -->
+            <section class="map-section">
+                <h2>Carte Interactive</h2>
+                <div class="interactive-map">
+                    <div class="map-container" id="haitiMap">
+                        <!-- Zones cliquables SVG seraient idéales, mais pour simplifier -->
+                        <div class="map-regions">
+                            <div class="region north" data-region="north">
+                                <div class="region-info">
+                                    <h3>Nord</h3>
+                                    <p>Cap-Haïtien, Plaine du Nord</p>
+                                </div>
+                            </div>
+                            <div class="region west" data-region="west">
+                                <div class="region-info">
+                                    <h3>Ouest</h3>
+                                    <p>Port-au-Prince, Pétion-Ville</p>
+                                </div>
+                            </div>
+                            <div class="region south" data-region="south">
+                                <div class="region-info">
+                                    <h3>Sud</h3>
+                                    <p>Les Cayes, Jacmel</p>
+                                </div>
+                            </div>
+                            <div class="region southeast" data-region="southeast">
+                                <div class="region-info">
+                                    <h3>Sud-Est</h3>
+                                    <p>Belle-Anse, Thiotte</p>
+                                </div>
+                            </div>
+                            <div class="region central" data-region="central">
+                                <div class="region-info">
+                                    <h3>Centre</h3>
+                                    <p>Hinche, Plateau Central</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-legend">
+                        <h4>Légende</h4>
+                        <ul>
+                            <li><span class="color-sample" style="background-color: #1B4D3E;"></span> Montagnes</li>
+                            <li><span class="color-sample" style="background-color: #D4AF37;"></span> Plaines</li>
+                            <li><span class="color-sample" style="background-color: #1E90FF;"></span> Côtes</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Statistiques Géographiques -->
+            <section class="stats-section">
+                <h2>Données Géographiques</h2>
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <h3>Superficie</h3>
+                        <p class="stat-number">27,750 km²</p>
+                        <p class="stat-desc">Tiers occidental d'Hispaniola</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Point culminant</h3>
+                        <p class="stat-number">2,680 m</p>
+                        <p class="stat-desc">Pic La Selle</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Côtes</h3>
+                        <p class="stat-number">1,771 km</p>
+                        <p class="stat-desc">Littoral caraïbe et atlantique</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Climat</h3>
+                        <p class="stat-number">Tropical</p>
+                        <p class="stat-desc">Saison des pluies : Mai-Nov</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Relief et Montagnes -->
+            <section class="relief-section">
+                <h2>Relief et Chaînes Montagneuses</h2>
+                <div class="mountain-grid">
+                    <div class="mountain-card">
+                        <h3>Massif de la Selle</h3>
+                        <p>Chaîne culminant au Pic La Selle (2,680 m), abritant le Parc National La Visite.</p>
+                    </div>
+                    <div class="mountain-card">
+                        <h3>Massif de la Hotte</h3>
+                        <p>Région riche en biodiversité avec la Forêt des Pins et plusieurs espèces endémiques.</p>
+                    </div>
+                    <div class="mountain-card">
+                        <h3>Massif du Nord</h3>
+                        <p>Chaîne séparant le nord du reste du pays, connue pour ses paysages karstiques.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fleuves Principaux -->
+            <section class="rivers-section">
+                <h2>Principaux Fleuves</h2>
+                <div class="rivers-list">
+                    <div class="river-item">
+                        <h3>Fleuve Artibonite</h3>
+                        <p>320 km - Plus long fleuve d'Haïti, irrigant la plaine de l'Artibonite.</p>
+                    </div>
+                    <div class="river-item">
+                        <h3>Rivière du Massacre</h3>
+                        <p>Frontalière avec la République Dominicaine, importante historiquement.</p>
+                    </div>
+                    <div class="river-item">
+                        <h3>Grande Rivière du Nord</h3>
+                        <p>Approvisionne la région nord en eau pour l'agriculture.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Régions -->
+            <section class="regions-section">
+                <h2>Régions Administratives</h2>
+                <div class="regions-table-container">
+                    <table class="regions-table">
+                        <thead>
+                            <tr>
+                                <th>Département</th>
+                                <th>Capitale</th>
+                                <th>Population</th>
+                                <th>Superficie (km²)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ouest</td>
+                                <td>Port-au-Prince</td>
+                                <td>4,029,705</td>
+                                <td>4,982</td>
+                            </tr>
+                            <tr>
+                                <td>Artibonite</td>
+                                <td>Gonaïves</td>
+                                <td>1,727,524</td>
+                                <td>4,984</td>
+                            </tr>
+                            <tr>
+                                <td>Nord</td>
+                                <td>Cap-Haïtien</td>
+                                <td>1,067,177</td>
+                                <td>2,114</td>
+                            </tr>
+                            <tr>
+                                <td>Nord-Est</td>
+                                <td>Fort-Liberté</td>
+                                <td>393,967</td>
+                                <td>1,805</td>
+                            </tr>
+                            <tr>
+                                <td>Nord-Ouest</td>
+                                <td>Port-de-Paix</td>
+                                <td>728,807</td>
+                                <td>2,176</td>
+                            </tr>
+                            <tr>
+                                <td>Centre</td>
+                                <td>Hinche</td>
+                                <td>746,236</td>
+                                <td>3,487</td>
+                            </tr>
+                            <tr>
+                                <td>Sud</td>
+                                <td>Les Cayes</td>
+                                <td>774,976</td>
+                                <td>2,654</td>
+                            </tr>
+                            <tr>
+                                <td>Sud-Est</td>
+                                <td>Jacmel</td>
+                                <td>632,601</td>
+                                <td>2,023</td>
+                            </tr>
+                            <tr>
+                                <td>Grand'Anse</td>
+                                <td>Jérémie</td>
+                                <td>468,301</td>
+                                <td>3,310</td>
+                            </tr>
+                            <tr>
+                                <td>Nippes</td>
+                                <td>Miragoâne</td>
+                                <td>342,525</td>
+                                <td>1,219</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Galerie Géographique -->
+            <section class="gallery-section">
+                <h2>Galerie Géographique</h2>
+                <div class="photo-gallery">
+                    <figure>
+                        <img src="images/geography-mountains.webp" alt="Montagnes haïtiennes" loading="lazy">
+                        <figcaption>Chaîne de montagnes en Haïti</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/geography-beach.webp" alt="Plage haïtienne" loading="lazy">
+                        <figcaption>Côte caraïbe haïtienne</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/geography-valley.webp" alt="Vallée haïtienne" loading="lazy">
+                        <figcaption>Vallée agricole en Haïti</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/geography-forest.webp" alt="Forêt haïtienne" loading="lazy">
+                        <figcaption>Forêt tropicale haïtienne</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Découverte Haïti</h3>
+                    <p>Site éducatif dédié à la promotion du patrimoine haïtien</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="geography.html">Géographie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@decouvertehaiti.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Découverte Haïti. Tous droits réservés.</p>
+                <p>Dernière modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation hamburger
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                });
+            }
+            
+            // Update dates in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = document.lastModified;
+            
+            // Interactive map functionality
+            const regions = document.querySelectorAll('.map-regions .region');
+            const regionInfo = {
+                north: "Région Nord: Cap-Haïtien, Plaine du Nord, riche en histoire coloniale.",
+                west: "Région Ouest: Port-au-Prince, capitale économique et politique.",
+                south: "Région Sud: Les Cayes, Jacmel, célèbre pour son carnaval et son artisanat.",
+                southeast: "Région Sud-Est: Zone montagneuse avec forêts tropicales.",
+                central: "Région Centre: Plateau Central, grenier agricole d'Haïti."
+            };
+            
+            regions.forEach(region => {
+                region.addEventListener('click', () => {
+                    const regionName = region.dataset.region;
+                    alert(regionInfo[regionName]);
+                });
+                
+                region.addEventListener('mouseenter', () => {
+                    region.style.opacity = '0.8';
+                });
+                
+                region.addEventListener('mouseleave', () => {
+                    region.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

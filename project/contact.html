@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Découverte Haïti</title>
+    <meta name="description" content="Contactez-nous pour plus d'informations sur Haïti">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form-validation.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🇭🇹 Découverte Haïti</h1>
+                <p>Patrimoine & Culture</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="geography.html">Géographie</a></li>
+                    <li><a href="history.html">Histoire</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="tourism.html">Tourisme</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Contactez-nous</h1>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Informations de Contact</h2>
+                <p><strong>Email:</strong> info@decouvertehaiti.org</p>
+                <p><strong>Téléphone:</strong> +509 1234 5678</p>
+                <p><strong>Adresse:</strong> Port-au-Prince, Haïti</p>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <h2>Envoyez-nous un message</h2>
+                
+                <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" name="name" required minlength="2">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="emailError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Sélectionnez un sujet</option>
+                        <option value="info">Demande d'information</option>
+                        <option value="tourisme">Informations touristiques</option>
+                        <option value="partenariat">Proposition de partenariat</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                    <div class="error-message" id="subjectError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">S'abonner à notre newsletter</label>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Envoyer le message</button>
+                
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Découverte Haïti. Tous droits réservés.</p>
+            <p>Dernière modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
