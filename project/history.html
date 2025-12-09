@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="styles/history.css">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/timeline.js" defer></script>
+    <script src="scripts/history.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <h1>🇭🇹 Découverte Haïti</h1>
-                <p>Patrimoine & Culture</p>
+            <div class="logo"> 
+                <a href="index.html" class="nav-logo"><h1>🇭🇹 Découverte Haïti</h1>
+                <p>Patrimoine & Culture</p></a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Menu navigation">
                 <span></span>
@@ -37,10 +38,11 @@
     </header>
 
     <main class="container">
-        <h1>Histoire d'Haïti</h1>
+        <h1>
+            Histoire d'Haïti</h1>
         
         <section class="intro-section">
-            <p>Haïti, première république noire indépendante au monde, possède une histoire riche et complexe qui a marqué l'histoire de l'humanité et continue d'inspirer les peuples en lutte pour leur liberté.</p>
+            <p>Haïti, proclamée première république noire indépendante du monde en 1804, est née de la seule révolte d'esclaves ayant abouti à la création d'un État souverain. Sa révolution, menée par des figures comme Toussaint Louverture et Jean-Jacques Dessalines, a non seulement brisé les chaînes du colonialisme français, mais aussi inspiré les mouvements abolitionnistes et anticoloniaux à travers les Amériques et au-delà. Héritière d'un parcours jalonné de résilience face aux défis politiques, économiques et naturels, la nation incarne encore aujourd'hui un symbole universel de dignité, de lutte pour l'émancipation et de fierté pour la diaspora africaine.</p>
         </section>
 
         <!-- Timeline Interactive -->
@@ -253,78 +255,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Navigation hamburger
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    hamburger.classList.toggle('active');
-                });
-            }
-            
-            // Update dates in footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-            document.getElementById('lastModified').textContent = document.lastModified;
-            
-            // Figures historiques - modal
-            const figureButtons = document.querySelectorAll('.btn-more');
-            const figureDetails = {
-                toussaint: "Toussaint Louverture, né esclave, devint le principal leader de la Révolution haïtienne. Capturé par les Français, il mourut en prison en France en 1803.",
-                dessalines: "Jean-Jacques Dessalines, ancien esclave, proclama l'indépendance d'Haïti le 1er janvier 1804 et devint le premier empereur sous le nom de Jacques Ier.",
-                henri: "Henri Christophe, ancien esclave et chef militaire, devint président puis roi d'Haïti. Il fit construire la Citadelle La Ferrière, monument classé UNESCO."
-            };
-            
-            figureButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const figure = button.dataset.figure;
-                    alert(figureDetails[figure]);
-                });
-            });
-            
-            // Quiz interactif
-            const quizOptions = document.querySelectorAll('.quiz-option');
-            const quizResult = document.getElementById('quiz-result');
-            
-            quizOptions.forEach(option => {
-                option.addEventListener('click', () => {
-                    const answer = option.dataset.answer;
-                    
-                    // Reset all buttons
-                    quizOptions.forEach(opt => {
-                        opt.style.backgroundColor = '';
-                        opt.style.color = '';
-                    });
-                    
-                    if (answer === '1804') {
-                        option.style.backgroundColor = '#1B4D3E';
-                        option.style.color = 'white';
-                        quizResult.textContent = 'Correct! Haïti a proclamé son indépendance le 1er janvier 1804.';
-                        quizResult.style.color = '#1B4D3E';
-                    } else {
-                        option.style.backgroundColor = '#D21034';
-                        option.style.color = 'white';
-                        quizResult.textContent = 'Incorrect. La réponse correcte est 1804.';
-                        quizResult.style.color = '#D21034';
-                    }
-                });
-            });
-            
-            // Timeline animation
-            const timelineItems = document.querySelectorAll('.timeline-item');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            timelineItems.forEach(item => observer.observe(item));
-        });
-    </script>
+
 </body>
 </html>

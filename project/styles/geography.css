@@ -1,8 +1,115 @@
 /* Geography Page Specific Styles */
+.intro-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.intro-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #3498db;
+}
+
 .geography-content {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.main-description {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #2980b9;
+}
+
+.main-description p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.geography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.geography-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-top: 3px solid #27ae60;
+}
+
+.geography-item h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.geography-item ul {
+    padding-left: 1.2rem;
+    margin: 0.8rem 0;
+}
+
+.geography-item li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.conclusion {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #e8f4fc;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    font-style: italic;
+}
+
+.conclusion p {
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* Icônes (utiliser Font Awesome ou SVG) */
+.icon-mountain:before { content: "⛰️"; }
+.icon-valley:before { content: "🌾"; }
+.icon-river:before { content: "🌊"; }
+.icon-climate:before { content: "🌤️"; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 1rem;
+    }
+    
+    .geography-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .geography-item {
+        padding: 1rem;
+    }
 }
 
 /* Interactive Map */

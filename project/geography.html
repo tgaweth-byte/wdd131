@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="styles/geography.css">
     <script src="scripts/main.js" defer></script>
     <script src="scripts/map-interactive.js" defer></script>
+    <script src="scripts/geography.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <h1>🇭🇹 Découverte Haïti</h1>
-                <p>Patrimoine & Culture</p>
+            <div class="logo"> 
+                <a href="index.html" class="nav-logo"><h1>🇭🇹 Découverte Haïti</h1>
+                <p>Patrimoine & Culture</p></a>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Menu navigation">
                 <span></span>
@@ -37,10 +38,62 @@
     </header>
 
     <main class="container">
-        <h1>Géographie d'Haïti</h1>
-        
         <section class="intro-section">
-            <p>Haïti occupe le tiers occidental de l'île d'Hispaniola, partageant sa frontière avec la République Dominicaine à l'est. Sa position stratégique dans les Caraïbes lui confère une diversité géographique remarquable.</p>
+            <h2>Géographie d'Haïti</h2>
+            
+            <div class="geography-content">
+                <div class="main-description">
+                    <p>Haïti occupe le tiers occidental de l'île d'Hispaniola qu'elle partage avec la République Dominicaine à l'est. Avec une superficie d'environ <strong>27 750 km²</strong>, le pays dispose de près de <strong>400 km de côtes</strong> baignées par l'océan Atlantique au nord et la mer des Caraïbes au sud.</p>
+                </div>
+                
+                <div class="geography-grid">
+                    <div class="geography-item">
+                        <h3><i class="icon-mountain"></i> Reliefs montagneux</h3>
+                        <ul class="mountain-list">
+                            <li><span class="highlight">Chaîne du Nord</span> et <span class="highlight">Massif du Nord</span></li>
+                            <li><span class="highlight">Massif de la Selle</span> - point culminant : Pic la Selle (<strong>2 680 m</strong>)</li>
+                            <li><span class="highlight">Massif de la Hotte</span></li>
+                            <li><span class="highlight">Massif du Centre</span> - incluant le Pic Macaya</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="geography-item">
+                        <h3><i class="icon-valley"></i> Plaines et vallées</h3>
+                        <p>Les principales zones fertiles comprennent :</p>
+                        <ul>
+                            <li>Plaine du Nord</li>
+                            <li>Plaine de l'Arbre</li>
+                            <li>Plaine de Léogâne</li>
+                            <li>Plaine du Cul-de-Sac (avec l'<span class="highlight">Étang Saumâtre</span>, lac salé)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="geography-item">
+                        <h3><i class="icon-river"></i> Réseau hydrographique</h3>
+                        <p>Principaux cours d'eau :</p>
+                        <ul>
+                            <li><span class="highlight">Rivière de l'Artibonite</span> - plus long cours d'eau d'Hispaniola</li>
+                            <li>Grande-Anse</li>
+                            <li>Trois Rivières</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="geography-item">
+                        <h3><i class="icon-climate"></i> Situation géographique & climat</h3>
+                        <p>Position stratégique dans les Caraïbes, entre :</p>
+                        <ul>
+                            <li>Cuba (nord-ouest)</li>
+                            <li>Jamaïque (sud-ouest)</li>
+                            <li>Îles Turques-et-Caïques (nord)</li>
+                        </ul>
+                        <p><strong>Climat tropical</strong> modéré par l'altitude et influencé par les alizés.</p>
+                    </div>
+                </div>
+                
+                <div class="conclusion">
+                    <p>Cette diversité géographique façonne les écosystèmes, l'agriculture et l'occupation humaine, tout en exposant le pays à des risques naturels (sismiques et cycloniques).</p>
+                </div>
+            </div>
         </section>
 
         <div class="geography-content">
@@ -290,48 +343,6 @@
         </div>
     </footer>
 
-    <script>
-        // Navigation hamburger
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                    hamburger.classList.toggle('active');
-                });
-            }
-            
-            // Update dates in footer
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-            document.getElementById('lastModified').textContent = document.lastModified;
-            
-            // Interactive map functionality
-            const regions = document.querySelectorAll('.map-regions .region');
-            const regionInfo = {
-                north: "Région Nord: Cap-Haïtien, Plaine du Nord, riche en histoire coloniale.",
-                west: "Région Ouest: Port-au-Prince, capitale économique et politique.",
-                south: "Région Sud: Les Cayes, Jacmel, célèbre pour son carnaval et son artisanat.",
-                southeast: "Région Sud-Est: Zone montagneuse avec forêts tropicales.",
-                central: "Région Centre: Plateau Central, grenier agricole d'Haïti."
-            };
-            
-            regions.forEach(region => {
-                region.addEventListener('click', () => {
-                    const regionName = region.dataset.region;
-                    alert(regionInfo[regionName]);
-                });
-                
-                region.addEventListener('mouseenter', () => {
-                    region.style.opacity = '0.8';
-                });
-                
-                region.addEventListener('mouseleave', () => {
-                    region.style.opacity = '1';
-                });
-            });
-        });
-    </script>
+    
 </body>
 </html>

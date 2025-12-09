@@ -112,7 +112,9 @@ nav a.active {
     margin: 3px 0;
     transition: var(--transition);
 }
-
+h1{
+    text-align: center;
+}
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 32, 159, 0.8), rgba(210, 16, 52, 0.8)),

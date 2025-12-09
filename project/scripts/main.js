@@ -148,8 +148,9 @@ function displayCities() {
     // Using array methods: map, filter, forEach
     const formattedCities = haitianCities.map(city => `<li>${city}</li>`).join('');
     
-    // Create and display city list if not already present
-    if (!document.getElementById('city-list')) {
+    // Check if the city list already exists to avoid duplication
+    let cityList = document.getElementById('city-list');
+    if (!cityList) {
         const citySection = document.createElement('section');
         citySection.className = 'city-section';
         citySection.innerHTML = `
@@ -157,32 +158,20 @@ function displayCities() {
             <ul id="city-list">${formattedCities}</ul>
         `;
         document.querySelector('main').appendChild(citySection);
+    } else {
+        // Update the city list if it already exists
+        cityList.innerHTML = formattedCities;
     }
 }
 
 // 7. Template Literals Example
 function createWelcomeMessage(name) {
-    return `Bienvenue ${name} sur notre site dédié à la découverte d'Haïti!`;
+    // Ensure the name is properly capitalized
+    const formattedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    return `Bienvenue ${formattedName} sur notre site dédié à la découverte d'Haïti!`;
 }
 
-// 8. Object Example
-const haitiInfo = {
-    name: "République d'Haïti",
-    capital: "Port-au-Prince",
-    population: 11743017,
-    languages: ["Créole haïtien", "Français"],
-    independenceYear: 1804,
-    
-    getDescription() {
-        return `${this.name}, capitale ${this.capital}, indépendante depuis ${this.independenceYear}.`;
-    },
-    
-    getLanguages() {
-        return `Langues: ${this.languages.join(' et ')}`;
-    }
-};
-
-// 9. Conditional Branching Example
+// 8. Conditional Branching Example
 function checkTouristSeason(month) {
     if (month >= 12 || month <= 3) {
         return "Haute saison touristique - Meilleure période pour visiter";
@@ -193,7 +182,7 @@ function checkTouristSeason(month) {
     }
 }
 
-// 10. DOM Manipulation - Create dynamic content
+// 9. DOM Manipulation - Create dynamic content
 function createDynamicContent() {
     // Create weather info section
     const weatherSection = document.createElement('div');
@@ -212,7 +201,7 @@ function createDynamicContent() {
     }
 }
 
-// 11. Event Listeners for Gallery Images
+// 10. Event Listeners for Gallery Images
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize everything
     updateDates();
@@ -277,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// 12. Lazy Loading Enhancement
+// 11. Lazy Loading Enhancement
 document.addEventListener('DOMContentLoaded', () => {
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     
