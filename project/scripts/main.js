@@ -23,6 +23,16 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// Add to main.js
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', function() {
+            this.src = 'images/placeholder.jpg'; // Create this fallback
+            this.alt = 'Image non disponible';
+        });
+    });
+});
+
 // 2. Update Footer Dates
 function updateDates() {
     const currentYear = new Date().getFullYear();
@@ -326,3 +336,23 @@ modalStyles.textContent = `
     }
 `;
 document.head.appendChild(modalStyles);
+// Fade in elements as they scroll into view
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Apply to sections
+document.querySelectorAll('section').forEach(section => {
+    section.classList.add('fade-in');
+    observer.observe(section);
+});

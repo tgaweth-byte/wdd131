@@ -36,14 +36,15 @@
     </header>
 
     <main class="container">
-        <h1>Contactez-nous</h1>
+        <section class="intro-section">
+            <h2>Contactez-nous</h2>
         
         <div class="contact-container">
             <div class="contact-info">
                 <h2>Informations de Contact</h2>
-                <p><strong>Email:</strong> info@decouvertehaiti.org</p>
-                <p><strong>Téléphone:</strong> +509 1234 5678</p>
-                <p><strong>Adresse:</strong> Port-au-Prince, Haïti</p>
+                <p><strong>Email: </strong>info@decouvertehaiti.org</p>
+                <p><strong>Téléphone: </strong>+509 1234 5678</p>
+                <p><strong>Adresse: </strong>Port-au-Prince, Haïti</p>
             </div>
             
             <form id="contactForm" class="contact-form">
@@ -79,7 +80,7 @@
                     <div class="error-message" id="messageError"></div>
                 </div>
                 
-                <div class="form-group checkbox-group">
+                <div class="form-groupcheckbox-group">
                     <input type="checkbox" id="newsletter" name="newsletter">
                     <label for="newsletter">S'abonner à notre newsletter</label>
                 </div>
@@ -93,8 +94,31 @@
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="currentYear"></span> Découverte Haïti. Tous droits réservés.</p>
-            <p>Dernière modification: <span id="lastModified"></span></p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Découverte Haïti</h3>
+                    <p>Site éducatif dédié à la promotion du patrimoine haïtien.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="geography.html">Géographie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="history.html">Histoire</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="tourism.html">Tourisme</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@decouvertehaiti.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Découverte Haïti. Tous droits réservés.</p>
+                <p>Dernière modification: <span id="lastModified"></span></p>
+            </div>
         </div>
     </footer>
 </body>

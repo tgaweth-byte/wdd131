@@ -194,3 +194,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     displaySubmissionCount();
 });
+
