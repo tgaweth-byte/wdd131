@@ -1,0 +1,645 @@
+/* Variables et styles de base */
+:root {
+  --primary-color: rgba(64, 156, 255, 0.8);
+  --secondary-color: rgba(147, 51, 234, 0.8);
+  --glass-color: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --text-color: #ffffff;
+  --background: linear-gradient(135deg, #0f172a, #1e293b);
+  --transition-speed: 0.4s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background: var(--background);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fond liquide animé */
+.liquid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, 
+      rgba(64, 156, 255, 0.05) 0%, 
+      rgba(147, 51, 234, 0.05) 25%, 
+      rgba(236, 72, 153, 0.05) 50%, 
+      rgba(239, 68, 68, 0.05) 75%, 
+      rgba(245, 158, 11, 0.05) 100%);
+  animation: liquidMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes liquidMove {
+  0% {
+      background-position: 0% 50%;
+      filter: hue-rotate(0deg);
+  }
+  50% {
+      background-position: 100% 50%;
+      filter: hue-rotate(90deg);
+  }
+  100% {
+      background-position: 0% 50%;
+      filter: hue-rotate(180deg);
+  }
+}
+
+/* Navigation */
+.liquid-nav {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.logo i {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Conteneur principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.liquid-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.liquid-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+.highlight {
+  color: var(--primary-color);
+  text-shadow: 0 0 20px rgba(64, 156, 255, 0.5);
+}
+
+.liquid-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Boutons Liquid Glass */
+.liquid-btn {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: var(--glass-color);
+  border: 1px solid var(--glass-border);
+  color: var(--text-color);
+  box-shadow: 0 8px 32px var(--glass-shadow);
+}
+
+.liquid-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+.liquid-btn:hover::before {
+  left: 100%;
+}
+
+.liquid-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(64, 156, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.liquid-btn.primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+}
+
+.liquid-btn.secondary {
+  background: transparent;
+  border: 1px solid var(--primary-color);
+}
+
+.liquid-btn.small {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* Sections */
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+/* Cartes Liquid Glass */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.liquid-card {
+  backdrop-filter: blur(15px);
+  background: var(--glass-color);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 8px 32px var(--glass-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.liquid-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.liquid-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.liquid-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Zone de démonstration */
+.demo-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 900px) {
+  .demo-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+.control-panel {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.control-group {
+  margin-bottom: 1.5rem;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.liquid-slider {
+  width: 100%;
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--glass-border);
+}
+
+.liquid-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(64, 156, 255, 0.5);
+}
+
+.control-group span {
+  display: inline-block;
+  margin-left: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  min-width: 40px;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.liquid-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.liquid-object {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  background: var(--glass-color);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 60px var(--glass-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-object::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+      transparent,
+      rgba(64, 156, 255, 0.3),
+      rgba(147, 51, 234, 0.3),
+      rgba(236, 72, 153, 0.3),
+      transparent
+  );
+  animation: rotate 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.liquid-inner {
+  text-align: center;
+  z-index: 2;
+}
+
+.liquid-inner i {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.liquid-inner p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.demo-hint {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+/* Section info */
+.info-section {
+  margin-bottom: 4rem;
+}
+
+/* Pied de page */
+.liquid-footer {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid var(--glass-border);
+  padding: 3rem 2rem 1.5rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-section h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* Modale */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.liquid-modal {
+  backdrop-filter: blur(20px);
+  background: var(--glass-color);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  transform: translateY(20px);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-overlay.active .liquid-modal {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.modal-header h3 i {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.close-modal {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.modal-body p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.liquid-input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.liquid-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(64, 156, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+  }
+  
+  .menu-toggle {
+      display: block;
+  }
+  
+  .liquid-title {
+      font-size: 2.5rem;
+  }
+  
+  .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .hero-buttons .liquid-btn {
+      width: 100%;
+      max-width: 300px;
+  }
+  
+  .form-group {
+      flex-direction: column;
+  }
+}
